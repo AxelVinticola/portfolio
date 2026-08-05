@@ -1,14 +1,35 @@
 import "../styles/navbar.css";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { HiOutlineDocumentArrowDown } from "react-icons/hi2";
+import { useEffect, useState } from "react";
 
 function Navbar() {
-  return (
-    <nav className="navbar">
 
-      <div className="logo">
-        Axel Vintícola
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <nav className={scrolled ? "navbar navbar--scrolled" : "navbar"}>
+      <div className="navbar__logo">
+        <a href="#hero">
+          Axel<span>.</span>
+        </a>
       </div>
 
-      <ul className="nav-links">
+      <div className="navbar__logo">
+        <a href="#hero">Axel Vintícola</a>
+      </div> 
+
+      <ul className="navbar__menu">
 
         <li>
           <a href="#about">Sobre mí</a>
@@ -32,18 +53,31 @@ function Navbar() {
 
       </ul>
 
-      <div className="social-links">
+      <div className="navbar__actions">
 
-        <a href="">
-          GitHub
+        <a
+          href="https://github.com/TU_USUARIO"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <FaGithub />
         </a>
 
-        <a href="">
-          LinkedIn
+        <a
+          href="https://linkedin.com/in/TU_USUARIO"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedin />
         </a>
 
-        <a href="">
-          CV
+        <a
+          href="/cv.pdf"
+          aria-label="Descargar CV"
+        >
+          <HiOutlineDocumentArrowDown />
         </a>
 
       </div>
