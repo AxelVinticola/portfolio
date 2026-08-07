@@ -1,3 +1,17 @@
+:root{
+  --bg:#0B0B0F;
+  --surface:#16161D;
+  --surface-light:#1E1E28;
+
+  --primary:#8B5CF6;
+  --primary-hover:#A855F7;
+
+  --text:#F8FAFC;
+  --text-secondary:#A1A1AA;
+
+  --border:rgba(255,255,255,.08);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,11 +40,10 @@ html{
     scroll-behavior:smooth;
 }
 
-body {
-  background: #0F172A;
-  color: #F8FAFC;
-  font-family: "Inter", sans-serif;
-  overflow-x: hidden;
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,sans-serif;
 }
 
 a{

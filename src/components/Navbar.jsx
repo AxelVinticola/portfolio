@@ -8,6 +8,7 @@ function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
@@ -15,41 +16,28 @@ function Navbar() {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
+
   }, []);
 
   return (
+
     <nav className={scrolled ? "navbar navbar--scrolled" : "navbar"}>
-      <div className="navbar__logo">
-        <a href="#hero">
-          Axel<span>.</span>
-        </a>
-      </div>
 
       <div className="navbar__logo">
-        <a href="#hero">Axel Vintícola</a>
-      </div> 
+        <a href="#hero">Axel<span>.</span></a>
+      </div>
 
       <ul className="navbar__menu">
 
-        <li>
-          <a href="#about">Sobre mí</a>
-        </li>
+        <li><a href="#about">Sobre mí</a></li>
 
-        <li>
-          <a href="#skills">Tecnologías</a>
-        </li>
+        <li><a href="#skills">Tecnologías</a></li>
 
-        <li>
-          <a href="#projects">Proyectos</a>
-        </li>
+        <li><a href="#projects">Proyectos</a></li>
 
-        <li>
-          <a href="#education">Educación</a>
-        </li>
+        <li><a href="#education">Educación</a></li>
 
-        <li>
-          <a href="#contact">Contacto</a>
-        </li>
+        <li><a href="#contact">Contacto</a></li>
 
       </ul>
 
@@ -83,6 +71,7 @@ function Navbar() {
       </div>
 
     </nav>
+
   );
 }
 

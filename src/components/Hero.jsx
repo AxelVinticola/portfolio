@@ -2,48 +2,57 @@ import "../styles/hero.css";
 
 function Hero() {
   return (
-    <section id="hero" className="hero">
+    <section className="hero">
 
-        <div className="hero__blob hero__blob--1"></div>
-        <div className="hero__blob hero__blob--2"></div>
-        <div className="hero__blob hero__blob--3"></div>
-      
-        <div className="hero__content">
+      <div className="hero__blob hero__blob--1"></div>
+      <div className="hero__blob hero__blob--2"></div>
+      <div className="hero__blob hero__blob--3"></div>
 
-            <p className="hero__greeting">
-            Hola 👋, soy
-            </p>
+      <div className="hero__content">
 
-            <h1 className="hero__title">
-            Axel Vintícola
-            </h1>
+        <span className="hero__badge">
+          Disponible para trabajar
+        </span>
 
-            <h2 className="hero__subtitle">
-            Desarrollador Full Stack
-            </h2>
+        <h1 className="hero__title">
+          Axel Vintícola
+        </h1>
 
-            <p className="hero__description">
-            Desarrollo aplicaciones web y móviles creando soluciones modernas,
-            escalables y orientadas a resolver problemas reales.
-            </p>
+        <h2 className="hero__subtitle">
+          Desarrollador Full Stack
+        </h2>
 
-            <div className="hero__buttons">
+        <p className="hero__description">
+          Desarrollo aplicaciones web y móviles con <strong>Python, Django, React y React Native</strong>,
+          creando soluciones modernas, escalables y orientadas a resolver problemas reales.
+        </p>
 
-            <a href="#projects" className="btn btn-primary">
-                Ver proyectos
-            </a>
+        <div className="hero__stack">
+          <span>Python</span>
+          <span>Django</span>
+          <span>React</span>
+          <span>React Native</span>
+        </div>
 
-            <a href="/cv.pdf" className="btn btn-secondary">
-                Descargar CV
-            </a>
+        <div className="hero__buttons">
 
-            </div>
+          <a href="#projects" className="btn btn-primary">
+            Ver proyectos
+          </a>
+
+          <a href="/cv.pdf" className="btn btn-secondary">
+            Descargar CV
+          </a>
 
         </div>
 
+      </div>
+
       <div className="hero__image">
 
-        FOTO
+        <div className="hero__photo">
+          FOTO
+        </div>
 
       </div>
 
