@@ -1,9 +1,10 @@
 import "../styles/projects.css";
+import { useState } from "react";
 
 import {
-  FaGithub,
   FaPython,
   FaReact,
+  FaImages,
 } from "react-icons/fa";
 
 import {
@@ -18,19 +19,124 @@ import {
 } from "react-icons/si";
 
 function Projects() {
+
+  const [gallery, setGallery] = useState(null);
+  const [currentImage, setCurrentImage] = useState(0);
+
+  const projects = {
+    erp: {
+      title: "Alma Canina ERP",
+
+      images: [
+        {
+          src: "/projects/erp/1.png",
+          title: "Dashboard",
+        },
+        {
+          src: "/projects/erp/2.png",
+          title: "Gestión de inventario",
+        },
+        {
+          src: "/projects/erp/3.png",
+          title: "Sistema POS",
+        },
+        {
+          src: "/projects/erp/4.png",
+          title: "Gestión de caja",
+        },
+        {
+          src: "/projects/erp/5.png",
+          title: "Sistema de turnos",
+        },
+        {
+          src: "/projects/erp/6.png",
+          title: "Gestión de clientes",
+        },
+        {
+          src: "/projects/erp/7.png",
+          title: "Gestión de empleados",
+        },
+        {
+          src: "/projects/erp/8.png",
+          title: "Gestión de proveedores",
+        },
+        {
+          src: "/projects/erp/9.png",
+          title: "Reportes y estadísticas",
+        },
+      ],
+    },
+
+    mobile: {
+      title: "Alma Canina Mobile",
+
+      images: [
+        {
+          src: "/projects/mobile/1.png",
+          title: "Inicio",
+        },
+        {
+          src: "/projects/mobile/2.png",
+          title: "Autenticación",
+        },
+        {
+          src: "/projects/mobile/3.png",
+          title: "Gestión de productos",
+        },
+        {
+          src: "/projects/mobile/4.png",
+          title: "Detalle de producto",
+        },
+        {
+          src: "/projects/mobile/5.png",
+          title: "Perfil de usuario",
+        },
+        {
+          src: "/projects/mobile/6.png",
+          title: "Integración con Firebase",
+        },
+      ],
+    },
+  };
+
+  const openGallery = (project) => {
+    setGallery(projects[project]);
+    setCurrentImage(0);
+  };
+
+  const closeGallery = () => {
+    setGallery(null);
+  };
+
+  const nextImage = () => {
+    setCurrentImage((prev) =>
+      prev === gallery.images.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const previousImage = () => {
+    setCurrentImage((prev) =>
+      prev === 0 ? gallery.images.length - 1 : prev - 1
+    );
+  };
+
   return (
     <section id="projects" className="projects">
 
       <div className="section-title">
         <h2>Proyectos</h2>
+
         <p>
           Proyectos desarrollados durante mi formación y experiencia práctica.
         </p>
       </div>
 
+
       <div className="projects__grid">
 
-        {/* ALMA CANINA ERP */}
+        {/* =========================
+            ALMA CANINA ERP
+        ========================== */}
 
         <article className="project-card">
 
@@ -96,34 +202,40 @@ function Projects() {
             <h4>Funcionalidades</h4>
 
             <ul className="project-card__features">
+
               <li>Inventario y alertas de stock</li>
               <li>Sistema POS de ventas</li>
+
               <li>Gestión de caja y movimientos</li>
               <li>Clientes, proveedores y empleados</li>
+
               <li>Sistema de turnos con calendario</li>
               <li>Roles y permisos de usuarios</li>
+
               <li>Dashboard con métricas y gráficos</li>
               <li>Reportes y generación de PDFs</li>
+
               <li>Emails transaccionales</li>
               <li>Catálogo y carrito de compras</li>
+
             </ul>
 
-            <a
-              href="https://github.com/Benjaback/Almacanina"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-card__link"
+            <button
+              className="project-card__gallery-button"
+              onClick={() => openGallery("erp")}
             >
-              <FaGithub />
-              Ver en GitHub
-            </a>
+              <FaImages />
+              Ver imágenes del proyecto
+            </button>
 
           </div>
 
         </article>
 
 
-        {/* ALMA CANINA MOBILE */}
+        {/* =========================
+            ALMA CANINA MOBILE
+        ========================== */}
 
         <article className="project-card">
 
@@ -142,8 +254,7 @@ function Projects() {
             <p className="project-card__description">
               Aplicación móvil desarrollada como complemento del ecosistema
               Alma Canina, permitiendo gestionar información desde
-              dispositivos móviles mediante una interfaz moderna y
-              adaptable.
+              dispositivos móviles mediante una interfaz moderna y adaptable.
             </p>
 
             <h4>Tecnologías</h4>
@@ -175,29 +286,104 @@ function Projects() {
             <h4>Funcionalidades</h4>
 
             <ul className="project-card__features">
+
               <li>Autenticación de usuarios</li>
               <li>Gestión de productos</li>
+
               <li>CRUD con Firestore</li>
               <li>Base de datos en tiempo real</li>
+
               <li>Carga y gestión de imágenes</li>
               <li>Perfiles de usuario</li>
+
               <li>Integración con Firebase</li>
               <li>Interfaz adaptada a dispositivos móviles</li>
+
             </ul>
 
-            <a
-              href="#"
-              className="project-card__link"
+            <button
+              className="project-card__gallery-button"
+              onClick={() => openGallery("mobile")}
             >
-              <FaGithub />
-              Ver en GitHub
-            </a>
+              <FaImages />
+              Ver imágenes del proyecto
+            </button>
 
           </div>
 
         </article>
 
       </div>
+
+
+      {/* =========================
+          GALERÍA
+      ========================== */}
+
+      {gallery && (
+
+        <div
+          className="gallery-modal"
+          onClick={closeGallery}
+        >
+
+          <div
+            className="gallery-modal__content"
+            onClick={(e) => e.stopPropagation()}
+          >
+
+            <button
+              className="gallery-modal__close"
+              onClick={closeGallery}
+              aria-label="Cerrar galería"
+            >
+              ×
+            </button>
+
+            <h3>{gallery.title}</h3>
+
+            <div className="gallery-modal__image-container">
+
+              <button
+                className="gallery-modal__arrow gallery-modal__arrow--left"
+                onClick={previousImage}
+                aria-label="Imagen anterior"
+              >
+                ‹
+              </button>
+
+              <div className="gallery-modal__image-wrapper">
+
+                <img
+                  src={gallery.images[currentImage].src}
+                  alt={gallery.images[currentImage].title}
+                />
+
+                <div className="gallery-modal__image-title">
+                  {gallery.images[currentImage].title}
+                </div>
+
+              </div>
+
+              <button
+                className="gallery-modal__arrow gallery-modal__arrow--right"
+                onClick={nextImage}
+                aria-label="Imagen siguiente"
+              >
+                ›
+              </button>
+
+            </div>
+
+            <div className="gallery-modal__counter">
+              {currentImage + 1} / {gallery.images.length}
+            </div>
+
+          </div>
+
+        </div>
+
+      )}
 
     </section>
   );
