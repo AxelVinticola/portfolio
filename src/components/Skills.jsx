@@ -20,6 +20,7 @@ import {
   SiMysql,
   SiFirebase,
   SiBootstrap,
+  SiTrello, SiFigma, SiJquery , SiDocker, SiAngular
 } from "react-icons/si";
 
 function Skills() {
@@ -41,9 +42,13 @@ function Skills() {
 
           <span><FaReact /> React</span>
           <span><SiJavascript /> JavaScript</span>
-          <span><FaHtml5 /> HTML5</span>
-          <span><FaCss3Alt /> CSS3</span>
+          <span><FaHtml5 /> HTML</span>
+          <span><FaCss3Alt /> CSS</span>
           <span><SiBootstrap /> Bootstrap</span>
+          <span><SiJquery /> jQuery</span>
+          <span><SiAngular/> Angular</span>
+          
+          
         </div>
 
         <div className="skill-card">
@@ -71,6 +76,10 @@ function Skills() {
           <span><FaGithub /> GitHub</span>
           <span><FaCode /> VS Code</span>
           <span><FaReact /> React Native</span>
+          <span><SiTrello /> Trello</span>
+          <span><SiFigma /> Figma</span> 
+          <span><SiDocker /> Docker</span>
+          
   <span><FaRocket /> Expo</span>
         </div>
 
