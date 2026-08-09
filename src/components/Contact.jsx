@@ -1,13 +1,105 @@
-function Contact(){
+import "../styles/contact.css";
 
-    return(
+import {
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 
-        <section id="contact">
+function Contact() {
+  return (
+    <section id="contact" className="contact">
 
-        </section >
+      <div className="section-title">
+        <h2>Contacto</h2>
 
-    )
+        <p>
+          ¿Tenés un proyecto o una oportunidad? Hablemos.
+        </p>
+      </div>
 
+
+      <div className="contact__container">
+
+        <div className="contact__content">
+
+          <h3>
+            Construyamos algo juntos.
+          </h3>
+
+          <p>
+            Estoy interesado en oportunidades dentro del sector IT,
+            especialmente en desarrollo Full Stack y desarrollo de
+            aplicaciones web y móviles.
+          </p>
+
+          <p>
+            Si querés conocer más sobre mi trabajo o conversar sobre
+            una oportunidad profesional, podés contactarme.
+          </p>
+
+          <div className="contact__location">
+            <FaMapMarkerAlt />
+            <span>Salta, Argentina</span>
+          </div>
+
+        </div>
+
+
+        <div className="contact__card">
+
+          <a
+            href="mailto:axelvinticola@gmail.com"
+            className="contact__item"
+          >
+            <FaEnvelope />
+
+            <div>
+              <span>Email</span>
+              <strong>axelvinticola@gmail.com</strong>
+            </div>
+
+          </a>
+
+
+          <a
+            href="https://github.com/Axel0820"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact__item"
+          >
+            <FaGithub />
+
+            <div>
+              <span>GitHub</span>
+              <strong>Ver mis proyectos</strong>
+            </div>
+
+          </a>
+
+
+          <a
+            href="https://linkedin.com/in/axel-vinticola-2b7245208"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact__item"
+          >
+            <FaLinkedin />
+
+            <div>
+              <span>LinkedIn</span>
+              <strong>Conectemos profesionalmente</strong>
+            </div>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+  );
 }
 
-export default Contact
+export default Contact;
