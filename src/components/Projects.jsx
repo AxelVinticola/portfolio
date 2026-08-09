@@ -26,99 +26,97 @@ function Projects() {
   const projects = {
     erp: {
       title: "Alma Canina ERP",
-
-      images: [
-        {
-          src: "/projects/erp/1.png",
-          title: "Dashboard",
-        },
-        {
-          src: "/projects/erp/2.png",
-          title: "Gestión de inventario",
-        },
-        {
-          src: "/projects/erp/3.png",
-          title: "Sistema POS",
-        },
-        {
-          src: "/projects/erp/4.png",
-          title: "Gestión de caja",
-        },
-        {
-          src: "/projects/erp/5.png",
-          title: "Sistema de turnos",
-        },
-        {
-          src: "/projects/erp/6.png",
-          title: "Gestión de clientes",
-        },
-        {
-          src: "/projects/erp/7.png",
-          title: "Gestión de empleados",
-        },
-        {
-          src: "/projects/erp/8.png",
-          title: "Gestión de proveedores",
-        },
-        {
-          src: "/projects/erp/9.png",
-          title: "Reportes y estadísticas",
-        },
-      ],
-    },
-
+        images: [
+              {
+                src: "/projects/erp/AdminTurnos.png",
+                title: "Administración de turnos",
+              },
+              {
+                src: "/projects/erp/CajaAbierta.png",
+                title: "Gestión y apertura de caja",
+              },
+              {
+                src: "/projects/erp/CalendarioTurno.png",
+                title: "Calendario de turnos",
+              },
+              {
+                src: "/projects/erp/Empleados.png",
+                title: "Gestión de empleados",
+              },
+              {
+                src: "/projects/erp/HistorialCaja.png",
+                title: "Historial de caja",
+              },
+              {
+                src: "/projects/erp/Perfil.png",
+                title: "Perfil de usuario",
+              },
+              {
+                src: "/projects/erp/Productos.png",
+                title: "Gestión de productos e inventario",
+              },
+              {
+                src: "/projects/erp/Proveedores.png",
+                title: "Gestión de proveedores",
+              },
+              {
+                src: "/projects/erp/TurnoCli.png",
+                title: "Reserva de turnos",
+              },
+            ],
+          },
     mobile: {
-      title: "Alma Canina Mobile",
+        title: "Alma Canina Mobile",
 
-      images: [
-        {
-          src: "/projects/mobile/1.png",
-          title: "Inicio",
-        },
-        {
-          src: "/projects/mobile/2.png",
-          title: "Autenticación",
-        },
-        {
-          src: "/projects/mobile/3.png",
-          title: "Gestión de productos",
-        },
-        {
-          src: "/projects/mobile/4.png",
-          title: "Detalle de producto",
-        },
-        {
-          src: "/projects/mobile/5.png",
-          title: "Perfil de usuario",
-        },
-        {
-          src: "/projects/mobile/6.png",
-          title: "Integración con Firebase",
-        },
-      ],
-    },
-  };
+        images: [
+          {
+            src: "/projects/mobile/inicio.jpeg",
+            title: "Pantalla de inicio",
+          },
+          {
+            src: "/projects/mobile/login.jpeg",
+            title: "Inicio de sesión",
+          },
+          {
+            src: "/projects/mobile/produ.jpeg",
+            title: "Gestión de productos",
+          },
+          {
+            src: "/projects/mobile/crearp.jpeg",
+            title: "Crear producto",
+          },
+          {
+            src: "/projects/mobile/editar.jpeg",
+            title: "Editar producto",
+          },
+          {
+            src: "/projects/mobile/perfil.jpeg",
+            title: "Perfil de usuario",
+          },
+        ],
+      },
+    };
 
-  const openGallery = (project) => {
-    setGallery(projects[project]);
-    setCurrentImage(0);
-  };
+    const openGallery = (project) => {
+      setGallery(projects[project]);
+      setCurrentImage(0);
+    };
 
-  const closeGallery = () => {
-    setGallery(null);
-  };
+    const closeGallery = () => {
+      setGallery(null);
+    };
 
-  const nextImage = () => {
-    setCurrentImage((prev) =>
-      prev === gallery.images.length - 1 ? 0 : prev + 1
-    );
-  };
+    const nextImage = () => {
+      setCurrentImage((prev) =>
+        prev === gallery.images.length - 1 ? 0 : prev + 1
+      );
+    };
 
-  const previousImage = () => {
-    setCurrentImage((prev) =>
-      prev === 0 ? gallery.images.length - 1 : prev - 1
-    );
-  };
+    const previousImage = () => {
+      setCurrentImage((prev) =>
+        prev === 0 ? gallery.images.length - 1 : prev - 1
+      );
+    };
 
   return (
     <section id="projects" className="projects">
