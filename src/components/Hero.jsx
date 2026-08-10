@@ -2,7 +2,7 @@ import "../styles/hero.css";
 
 function Hero() {
   return (
-    <section className="hero">
+    <section id="hero" className="hero">
 
       <div className="hero__blob hero__blob--1"></div>
       <div className="hero__blob hero__blob--2"></div>
@@ -55,7 +55,10 @@ function Hero() {
       <div className="hero__image">
 
         <div className="hero__photo">
-          FOTO
+          <img
+            src="/logoAV.png"
+            alt="Axel Vintícola"
+          />
         </div>
 
       </div>

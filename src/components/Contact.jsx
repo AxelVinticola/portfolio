@@ -4,7 +4,7 @@ import {
   FaEnvelope,
   FaGithub,
   FaLinkedin,
-  FaMapMarkerAlt,
+  FaMapMarkerAlt, FaPhone
 } from "react-icons/fa";
 
 function Contact() {
@@ -62,7 +62,32 @@ function Contact() {
 
           </a>
 
+          <a
+            href="mailto:axelvinticola@gmail.com"
+            className="contact__item"
+          >
+            <FaEnvelope />
 
+            <div>
+              <span>Email</span>
+              <strong>axelvinticola@gmail.com</strong>
+            </div>
+
+          </a>
+          
+          <a
+            href="tel:+5493874477853"
+            className="contact__item"
+          >
+            <FaPhone />
+
+            <div>
+              <span>Teléfono</span>
+              <strong>+54 9 387 447-7853</strong>
+            </div>
+          </a>
+          
+          
           <a
             href="https://github.com/Axel0820"
             target="_blank"

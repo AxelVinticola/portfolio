@@ -105,12 +105,37 @@
   color:white;
   transform:translateY(-3px);
 }
+/*========================= 
+imagen de perfil
+======================================================*/
+.hero__image {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
 
-.hero__image{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  z-index:2;
+  background: #17121f;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid rgba(168, 85, 247, 0.55);
+
+  box-shadow:
+    0 0 0 10px rgba(124, 58, 237, 0.08),
+    0 0 45px rgba(124, 58, 237, 0.25);
+
+  overflow: hidden;
+}
+
+.hero__image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
 }
 
 .hero__photo{

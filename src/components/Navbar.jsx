@@ -32,7 +32,10 @@ function Navbar() {
 
       <div className="navbar__logo">
         <a href="#hero" onClick={closeMenu}>
-          Axel.
+          <img
+            src="/logoAV.png"
+            alt="Axel Vintícola"
+          />
         </a>
       </div>
 

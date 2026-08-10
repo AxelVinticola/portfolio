@@ -24,16 +24,30 @@
 }
 
 
+.navbar__logo {
+  height: 40px;
+  width: 100px;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
 .navbar__logo a {
+  display: flex;
+  align-items: center;
 
-  font-size: 1.6rem;
+  height: 40px;
+}
 
-  font-weight: 700;
+.navbar__logo img {
+  width: 65px;
+  height: 65px;
 
-  color: #F8FAFC;
+  object-fit: contain;
 
-  text-decoration: none;
-
+  display: block;
 }
 
 
