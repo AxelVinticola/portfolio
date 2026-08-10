@@ -40,7 +40,11 @@ function Hero() {
             Ver proyectos
           </a>
 
-          <a href="/cv.pdf" className="btn btn-secondary">
+          <a
+            href="/CV_Vinticola_Axel_2026.pdf"
+            download="CV_Vinticola_Axel_2026.pdf"
+            className="btn btn-secondary"
+          >
             Descargar CV
           </a>
 
