@@ -49,18 +49,7 @@ function Contact() {
 
         <div className="contact__card">
 
-          <a
-            href="mailto:axelvinticola@gmail.com"
-            className="contact__item"
-          >
-            <FaEnvelope />
-
-            <div>
-              <span>Email</span>
-              <strong>axelvinticola@gmail.com</strong>
-            </div>
-
-          </a>
+          
 
           <a
             href="mailto:axelvinticola@gmail.com"
