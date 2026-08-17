@@ -78,7 +78,7 @@ function Contact() {
           
           
           <a
-            href="https://github.com/Axel0820"
+            href="https://github.com/AxelVinticola"
             target="_blank"
             rel="noopener noreferrer"
             className="contact__item"

@@ -82,7 +82,7 @@ function Navbar() {
       <div className="navbar__actions">
 
         <a
-          href="https://github.com/Axel0820"
+          href="https://github.com/AxelVinticola"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
