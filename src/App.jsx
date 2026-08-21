@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -6,16 +8,25 @@ import Projects from "./components/Projects";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import es from "./locales/es";
+import en from "./locales/en";
 
 function App() {
+
+  const [language, setLanguage] = useState("es");
+  const t = language === "es" ? es : en;
 
   return (
 
     <>
 
-      <Navbar/>
+      <Navbar
+        language={language}
+        setLanguage={setLanguage}
+        t={t}
+      />
 
-      <Hero/>
+      <Hero t={t}/>
 
       <About/>
 

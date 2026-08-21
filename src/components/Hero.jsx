@@ -1,6 +1,6 @@
 import "../styles/hero.css";
 
-function Hero() {
+function Hero({ t }) {
   return (
     <section id="hero" className="hero">
 
@@ -11,7 +11,7 @@ function Hero() {
       <div className="hero__content">
 
         <span className="hero__badge">
-          Disponible para trabajar
+          {t.hero.available}
         </span>
 
         <h1 className="hero__title">
@@ -19,12 +19,11 @@ function Hero() {
         </h1>
 
         <h2 className="hero__subtitle">
-          Desarrollador Full Stack
+          {t.hero.subtitle}
         </h2>
 
         <p className="hero__description">
-          Desarrollo aplicaciones web y móviles con <strong>Python, Django, React y React Native</strong>,
-          creando soluciones modernas, escalables y orientadas a resolver problemas reales.
+          {t.hero.description}
         </p>
 
         <div className="hero__stack">
@@ -37,7 +36,7 @@ function Hero() {
         <div className="hero__buttons">
 
           <a href="#projects" className="btn btn-primary">
-            Ver proyectos
+            {t.hero.projects}
           </a>
 
           <a
@@ -45,7 +44,7 @@ function Hero() {
             download="CV_Vinticola_Axel_2026.pdf"
             className="btn btn-secondary"
           >
-            Descargar CV
+            {t.hero.downloadCV}
           </a>
 
         </div>

@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineDocumentArrowDown, HiOutlineBars3, HiOutlineXMark } from "react-icons/hi2";
 import { useEffect, useState } from "react";
 
-function Navbar() {
+function Navbar({ language, setLanguage, t }) {
 
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -46,31 +46,31 @@ function Navbar() {
 
         <li>
           <a href="#about" onClick={closeMenu}>
-            Sobre mí
+            {t.navbar.about}
           </a>
         </li>
 
         <li>
           <a href="#skills" onClick={closeMenu}>
-            Tecnologías
+            {t.navbar.skills}
           </a>
         </li>
 
         <li>
           <a href="#projects" onClick={closeMenu}>
-            Proyectos
+            {t.navbar.projects}
           </a>
         </li>
 
         <li>
           <a href="#education" onClick={closeMenu}>
-            Educación
+            {t.navbar.education}
           </a>
         </li>
 
         <li>
           <a href="#contact" onClick={closeMenu}>
-            Contacto
+            {t.navbar.contact}
           </a>
         </li>
 
@@ -80,6 +80,14 @@ function Navbar() {
       {/* ICONOS */}
 
       <div className="navbar__actions">
+
+        <button
+          id="lang-toggle"
+          className="navbar__language"
+          onClick={() => setLanguage(language === "es" ? "en" : "es")}
+        >
+          {language === "es" ? "🇺🇸 EN" : "🇪🇸 ES"}
+        </button>
 
         <a
           href="https://github.com/AxelVinticola"

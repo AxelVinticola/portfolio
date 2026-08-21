@@ -33,9 +33,14 @@ function About() {
           </p>
 
           <p>
-            Actualmente busco mi primera oportunidad profesional en el sector IT,
-            donde pueda aportar mis conocimientos, continuar aprendiendo y crecer
-            como desarrollador.
+            Además, poseo una Licenciatura en Criminalística, que complementa mi perfil con capacidades de a
+            nálisis, investigación, elaboración de informes técnicos, resolución de problemas y atención al detalle.
+            
+          </p>
+
+          <p>
+            Me interesa participar en proyectos orientados al desarrollo de soluciones tecnológicas, continuar 
+            ampliando mis conocimientos y afrontar nuevos desafíos dentro del sector IT.
           </p>
 
         </div>
