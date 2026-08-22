@@ -28,9 +28,9 @@ function App() {
 
       <Hero t={t}/>
 
-      <About/>
+      <About t={t}/>
 
-      <Skills/>
+      <Skills t={t}/>
 
       <Projects/>
 

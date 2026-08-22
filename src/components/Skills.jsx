@@ -23,22 +23,21 @@ import {
   SiTrello, SiFigma, SiJquery , SiDocker, SiAngular
 } from "react-icons/si";
 
-function Skills() {
+function Skills({ t }) {
   return (
     <section id="skills" className="skills">
 
       <div className="section-title">
-        <h2>Tecnologías</h2>
+        <h2>{t.skills.title}</h2>
         <p>
-          Estas son las herramientas y tecnologías con las que desarrollo mis
-          proyectos.
+          {t.skills.subtitle}
         </p>
       </div>
 
       <div className="skills__grid">
 
         <div className="skill-card">
-          <h3>Frontend</h3>
+          <h3>{t.skills.frontend}</h3>
 
           <span><FaReact /> React</span>
           <span><SiJavascript /> JavaScript</span>
@@ -52,7 +51,7 @@ function Skills() {
         </div>
 
         <div className="skill-card">
-          <h3>Backend</h3>
+          <h3>{t.skills.backend}</h3>
 
           <span><FaPython /> Python</span>
           <span><SiDjango /> Django</span>
@@ -62,7 +61,7 @@ function Skills() {
         </div>
 
         <div className="skill-card">
-          <h3>Bases de Datos</h3>
+          <h3>{t.skills.databases}</h3>
 
           <span><SiMysql /> MySQL</span>
           <span><SiFirebase /> Firebase</span>
@@ -70,7 +69,7 @@ function Skills() {
         </div>
 
         <div className="skill-card">
-          <h3>Herramientas</h3>
+          <h3>{t.skills.tools}</h3>
 
           <span><FaGitAlt /> Git</span>
           <span><FaGithub /> GitHub</span>
