@@ -7,16 +7,13 @@ import {
   FaMapMarkerAlt, FaPhone
 } from "react-icons/fa";
 
-function Contact() {
+function Contact({ t }) {
   return (
     <section id="contact" className="contact">
 
       <div className="section-title">
-        <h2>Contacto</h2>
-
-        <p>
-          ¿Tenés un proyecto o una oportunidad? Hablemos.
-        </p>
+        <h2>{t.contact.title}</h2>
+        <p>{t.contact.subtitle}</p>
       </div>
 
 
@@ -25,23 +22,20 @@ function Contact() {
         <div className="contact__content">
 
           <h3>
-            Construyamos algo juntos.
+            {t.contact.heading}
           </h3>
 
           <p>
-            Estoy interesado en oportunidades dentro del sector IT,
-            especialmente en desarrollo Full Stack y desarrollo de
-            aplicaciones web y móviles.
+            {t.contact.paragraph1}
           </p>
 
           <p>
-            Si querés conocer más sobre mi trabajo o conversar sobre
-            una oportunidad profesional, podés contactarme.
+            {t.contact.paragraph2}
           </p>
 
           <div className="contact__location">
             <FaMapMarkerAlt />
-            <span>Salta, Argentina</span>
+            <span>{t.contact.location}</span>
           </div>
 
         </div>
@@ -58,7 +52,7 @@ function Contact() {
             <FaEnvelope />
 
             <div>
-              <span>Email</span>
+              <span>{t.contact.email}</span>
               <strong>axelvinticola@gmail.com</strong>
             </div>
 
@@ -71,7 +65,7 @@ function Contact() {
             <FaPhone />
 
             <div>
-              <span>Teléfono</span>
+              <span>{t.contact.phone}</span>
               <strong>+54 9 387 447-7853</strong>
             </div>
           </a>
@@ -86,8 +80,8 @@ function Contact() {
             <FaGithub />
 
             <div>
-              <span>GitHub</span>
-              <strong>Ver mis proyectos</strong>
+              <span>{t.contact.github}</span>
+              <strong>{t.contact.githubAction}</strong>
             </div>
 
           </a>
@@ -102,8 +96,8 @@ function Contact() {
             <FaLinkedin />
 
             <div>
-              <span>LinkedIn</span>
-              <strong>Conectemos profesionalmente</strong>
+              <span>{t.contact.linkedin}</span>
+              <strong>{t.contact.linkedinAction}</strong>
             </div>
 
           </a>

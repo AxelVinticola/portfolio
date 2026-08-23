@@ -18,7 +18,7 @@ import {
   SiFirebase,
 } from "react-icons/si";
 
-function Projects() {
+function Projects({ t }) {
 
   const [gallery, setGallery] = useState(null);
   const [currentImage, setCurrentImage] = useState(0);
@@ -66,33 +66,26 @@ function Projects() {
             ],
           },
     mobile: {
-        title: "Alma Canina Mobile",
+        title: "Yume Sakura Salon",
 
         images: [
           {
-            src: "/projects/mobile/inicio.jpeg",
-            title: "Pantalla de inicio",
+            src: "/projects/mobile/inicio.png",
+            title: "Inicio / Dashboard: Resumen rápido del día",
           },
           {
             src: "/projects/mobile/login.jpeg",
-            title: "Inicio de sesión",
+            title: "Agenda: Vista completa del calendario",
           },
           {
             src: "/projects/mobile/produ.jpeg",
-            title: "Gestión de productos",
+            title: "Catálogo de Servicios & Productos:",
           },
           {
             src: "/projects/mobile/crearp.jpeg",
-            title: "Crear producto",
+            title: "Gestión de Personal:",
           },
-          {
-            src: "/projects/mobile/editar.jpeg",
-            title: "Editar producto",
-          },
-          {
-            src: "/projects/mobile/perfil.jpeg",
-            title: "Perfil de usuario",
-          },
+          
         ],
       },
     };
@@ -122,11 +115,8 @@ function Projects() {
     <section id="projects" className="projects">
 
       <div className="section-title">
-        <h2>Proyectos</h2>
-
-        <p>
-          Proyectos desarrollados durante mi formación y experiencia práctica.
-        </p>
+        <h2>{t.projects.title}</h2>
+        <p>{t.projects.subtitle}</p>
       </div>
 
 
@@ -145,18 +135,17 @@ function Projects() {
           <div className="project-card__content">
 
             <span className="project-card__type">
-              SISTEMA ERP · FULL STACK
+              {t.projects.erp.type}
             </span>
 
-            <h3>Alma Canina ERP</h3>
+            <h3>{t.projects.erp.title}</h3>
 
             <p className="project-card__description">
-              Sistema ERP web desarrollado para la gestión integral de una
-              forrajería y peluquería canina. Centraliza las principales
-              operaciones del negocio en una única plataforma.
+              {t.projects.erp.description}
+
             </p>
 
-            <h4>Tecnologías</h4>
+            <h4>{t.projects.erp.technologies}</h4>
 
             <div className="project-card__technologies">
 
@@ -197,24 +186,24 @@ function Projects() {
 
             </div>
 
-            <h4>Funcionalidades</h4>
+            <h4>{t.projects.erp.features}</h4>
 
             <ul className="project-card__features">
 
-              <li>Inventario y alertas de stock</li>
-              <li>Sistema POS de ventas</li>
+              <li>{t.projects.erp.feature1}</li>
+              <li>{t.projects.erp.feature2}</li>
 
-              <li>Gestión de caja y movimientos</li>
-              <li>Clientes, proveedores y empleados</li>
+              <li>{t.projects.erp.feature3}</li>
+              <li>{t.projects.erp.feature4}</li>
 
-              <li>Sistema de turnos con calendario</li>
-              <li>Roles y permisos de usuarios</li>
+              <li>{t.projects.erp.feature5}</li>
+              <li>{t.projects.erp.feature6}</li>
 
-              <li>Dashboard con métricas y gráficos</li>
-              <li>Reportes y generación de PDFs</li>
+              <li>{t.projects.erp.feature7}</li>
+              <li>{t.projects.erp.feature8}</li>
 
-              <li>Emails transaccionales</li>
-              <li>Catálogo y carrito de compras</li>
+              <li>{t.projects.erp.feature9}</li>
+              <li>{t.projects.erp.feature10}</li>
 
             </ul>
 
@@ -223,7 +212,7 @@ function Projects() {
               onClick={() => openGallery("erp")}
             >
               <FaImages />
-              Ver imágenes del proyecto
+              {t.projects.erp.galleryButton}
             </button>
 
           </div>
@@ -244,18 +233,16 @@ function Projects() {
           <div className="project-card__content">
 
             <span className="project-card__type">
-              APLICACIÓN MÓVIL
+              {t.projects.salon.type}
             </span>
 
-            <h3>Alma Canina Mobile</h3>
+            <h3>{t.projects.salon.title}</h3>
 
             <p className="project-card__description">
-              Aplicación móvil desarrollada como complemento del ecosistema
-              Alma Canina, permitiendo gestionar información desde
-              dispositivos móviles mediante una interfaz moderna y adaptable.
+              {t.projects.salon.description}
             </p>
 
-            <h4>Tecnologías</h4>
+            <h4>{t.projects.salon.technologies}</h4>
 
             <div className="project-card__technologies">
 
@@ -281,21 +268,18 @@ function Projects() {
 
             </div>
 
-            <h4>Funcionalidades</h4>
+            <h4>{t.projects.salon.features}</h4>
 
             <ul className="project-card__features">
 
-              <li>Autenticación de usuarios</li>
-              <li>Gestión de productos</li>
-
-              <li>CRUD con Firestore</li>
-              <li>Base de datos en tiempo real</li>
-
-              <li>Carga y gestión de imágenes</li>
-              <li>Perfiles de usuario</li>
-
-              <li>Integración con Firebase</li>
-              <li>Interfaz adaptada a dispositivos móviles</li>
+              <li>{t.projects.salon.feature1}</li>
+              <li>{t.projects.salon.feature2}</li>
+              <li>{t.projects.salon.feature3}</li>
+              <li>{t.projects.salon.feature4}</li>
+              <li>{t.projects.salon.feature5}</li>
+              <li>{t.projects.salon.feature6}</li>
+              <li>{t.projects.salon.feature7}</li>
+              <li>{t.projects.salon.feature8}</li>
 
             </ul>
 
@@ -304,7 +288,7 @@ function Projects() {
               onClick={() => openGallery("mobile")}
             >
               <FaImages />
-              Ver imágenes del proyecto
+              {t.projects.salon.galleryButton}
             </button>
 
           </div>
@@ -333,7 +317,7 @@ function Projects() {
             <button
               className="gallery-modal__close"
               onClick={closeGallery}
-              aria-label="Cerrar galería"
+              aria-label={t.projects.gallery.close}
             >
               ×
             </button>
@@ -345,7 +329,7 @@ function Projects() {
               <button
                 className="gallery-modal__arrow gallery-modal__arrow--left"
                 onClick={previousImage}
-                aria-label="Imagen anterior"
+                aria-label={t.projects.gallery.previous}
               >
                 ‹
               </button>
@@ -366,7 +350,7 @@ function Projects() {
               <button
                 className="gallery-modal__arrow gallery-modal__arrow--right"
                 onClick={nextImage}
-                aria-label="Imagen siguiente"
+                aria-label={t.projects.gallery.next}
               >
                 ›
               </button>

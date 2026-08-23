@@ -1,14 +1,12 @@
 import "../styles/education.css";
 
-function Education() {
+function Education({ t }) {
   return (
     <section id="education" className="education">
 
       <div className="section-title">
-        <h2>Educación</h2>
-        <p>
-          Formación académica y preparación profesional.
-        </p>
+        <h2>{t.education.title}</h2>
+        <p>{t.education.subtitle}</p>
       </div>
 
       <div className="education__container">
@@ -16,34 +14,33 @@ function Education() {
         <article className="education-card">
 
             <div className="education-card__year">
-                FORMACIÓN PRINCIPAL
+                {t.education.main.type}
             </div>
 
             <div className="education-card__content">
 
                 <h3>
-                Técnico Superior en Análisis de Sistemas Informáticos
+                {t.education.main.title}
+
                 </h3>
 
                 <h4>
-                Instituto Superior Doctor Ramón Carrillo
+                Instituto Superior del Milagro N.º 8207
                 </h4>
 
                 <p>
-                Formación superior enfocada en el desarrollo de software,
-                análisis y diseño de sistemas, bases de datos, desarrollo web
-                y aplicaciones móviles.
+                {t.education.main.description}
                 </p>
 
                 <div className="education-card__tags">
-                <span>Programación</span>
-                <span>Desarrollo Web</span>
-                <span>Desarrollo Móvil</span>
-                <span>Bases de Datos</span>
-                <span>Análisis de Sistemas</span>
-                <span>Seguridad Informática</span>
-                <span>Teleinformática</span>
-                <span>Práctica Profesional</span>
+                <span>{t.education.main.tag1}</span>
+                <span>{t.education.main.tag2}</span>
+                <span>{t.education.main.tag3}</span>
+                <span>{t.education.main.tag4}</span>
+                <span>{t.education.main.tag5}</span>
+                <span>{t.education.main.tag6}</span>
+                <span>{t.education.main.tag7}</span>
+                <span>{t.education.main.tag8}</span>
                 </div>
 
             </div>
@@ -54,13 +51,13 @@ function Education() {
         <article className="education-card education-card--secondary">
 
             <div className="education-card__year">
-                FORMACIÓN COMPLEMENTARIA
+                {t.education.secondary.type}
             </div>
 
             <div className="education-card__content">
 
                 <h3>
-                Licenciatura en Criminalística
+                {t.education.secondary.title}
                 </h3>
 
                 <h4>
@@ -68,18 +65,16 @@ function Education() {
                 </h4>
 
                 <p>
-                Formación orientada al análisis e investigación, que aportó una base sólida 
-                en pensamiento crítico, análisis de datos, resolución de problemas complejos 
-                y aplicación de metodologías estructuradas — habilidades que complementan 
-                mi perfil técnico como Analista de Sistemas.
+                {t.education.secondary.description}
                 </p>
 
                 <div className="education-card__tags">
-                    <span>Pensamiento analítico</span>
-                    <span>Resolución de problemas</span>
-                    <span>Metodología de investigación</span>
-                    <span>Razonamiento lógico-deductivo</span>
-                    <span>Elaboración de informes técnicos</span>
+                    <span>{t.education.secondary.tag1}</span>
+                    <span>{t.education.secondary.tag2}</span>
+                    <span>{t.education.secondary.tag3}</span>
+                    <span>{t.education.secondary.tag4}</span>
+                    <span>{t.education.secondary.tag5}</span>
+                    <span>{t.education.secondary.tag6}</span>
                 </div>
 
             </div>

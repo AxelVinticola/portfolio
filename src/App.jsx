@@ -32,11 +32,11 @@ function App() {
 
       <Skills t={t}/>
 
-      <Projects/>
+      <Projects t={t}/>
 
-      <Education/>
+      <Education t={t}/>
 
-      <Contact/>
+      <Contact t={t}/>
 
       <Footer/>
 
