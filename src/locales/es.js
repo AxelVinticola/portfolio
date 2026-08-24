@@ -66,7 +66,7 @@ const es = {
 
     erp: {
       type: "SISTEMA ERP · FULL STACK",
-      title: "Alma Canina ERP",
+      title: "F.P Laura ERP",
       description:
         "Sistema ERP web desarrollado para la gestión integral de una forrajería y peluquería canina. Centraliza las principales operaciones del negocio en una única plataforma.",
       technologies: "Tecnologías",

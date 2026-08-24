@@ -28,41 +28,46 @@ function Projects({ t }) {
       title: "Alma Canina ERP",
         images: [
               {
-                src: "/projects/erp/AdminTurnos.png",
+                src: "/projects/erp/turnocli.png",
+                title: "Turno vista cliente",
+              },
+              {
+                src: "/projects/erp/inicio.png",
+                title: "Inicio",
+              },  
+              {
+                src: "/projects/erp/turnoemp.png",
                 title: "Administración de turnos",
               },
               {
-                src: "/projects/erp/CajaAbierta.png",
-                title: "Gestión y apertura de caja",
-              },
-              {
-                src: "/projects/erp/CalendarioTurno.png",
+                src: "/projects/erp/calendario.png",
                 title: "Calendario de turnos",
               },
               {
-                src: "/projects/erp/Empleados.png",
+                src: "/projects/erp/detalleturno.png",
+                title: "informacion adicional sobre el truno",
+              },
+              {
+                src: "/projects/erp/caja.png",
+                title: "Gestión y apertura de caja",
+              },
+              
+              
+              {
+                src: "/projects/erp/empleados.png",
                 title: "Gestión de empleados",
               },
+              
+             
               {
-                src: "/projects/erp/HistorialCaja.png",
-                title: "Historial de caja",
-              },
-              {
-                src: "/projects/erp/Perfil.png",
-                title: "Perfil de usuario",
-              },
-              {
-                src: "/projects/erp/Productos.png",
+                src: "/projects/erp/inventario.png",
                 title: "Gestión de productos e inventario",
               },
               {
-                src: "/projects/erp/Proveedores.png",
+                src: "/projects/erp/proveedores.png",
                 title: "Gestión de proveedores",
               },
-              {
-                src: "/projects/erp/TurnoCli.png",
-                title: "Reserva de turnos",
-              },
+              
             ],
           },
     mobile: {
@@ -74,15 +79,15 @@ function Projects({ t }) {
             title: "Inicio / Dashboard: Resumen rápido del día",
           },
           {
-            src: "/projects/mobile/login.jpeg",
+            src: "/projects/mobile/agenda.png",
             title: "Agenda: Vista completa del calendario",
           },
           {
-            src: "/projects/mobile/produ.jpeg",
+            src: "/projects/mobile/produ_serv.png",
             title: "Catálogo de Servicios & Productos:",
           },
           {
-            src: "/projects/mobile/crearp.jpeg",
+            src: "/projects/mobile/g_personal.png",
             title: "Gestión de Personal:",
           },
           

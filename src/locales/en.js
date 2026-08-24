@@ -65,7 +65,7 @@ const en = {
 
     erp: {
       type: "ERP SYSTEM · FULL STACK",
-      title: "Alma Canina ERP",
+      title: "F.P Laura ERP",
       description:
         "Web-based ERP system developed for the comprehensive management of a pet food store and dog grooming business. It centralizes the main business operations on a single platform.",
       technologies: "Technologies",
