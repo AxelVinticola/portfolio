@@ -162,7 +162,7 @@ education: {
     paragraph2:
       "Si querés conocer más sobre mi trabajo o conversar sobre una oportunidad profesional, podés contactarme.",
 
-    location: "Salta, Argentina",
+    location: "Argentina",
 
     email: "Email",
     phone: "Teléfono",

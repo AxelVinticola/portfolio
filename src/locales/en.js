@@ -161,7 +161,7 @@ const en = {
     paragraph2:
       "If you would like to learn more about my work or discuss a professional opportunity, feel free to contact me.",
 
-    location: "Salta, Argentina",
+    location: "Argentina",
 
     email: "Email",
     phone: "Phone",
