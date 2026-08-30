@@ -11,7 +11,7 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaCode,
-  FaRocket
+  FaRocket, 
 } from "react-icons/fa";
 
 import {
@@ -20,9 +20,9 @@ import {
   SiMysql,
   SiFirebase,
   SiBootstrap,
-  SiTrello, SiFigma, SiJquery , SiDocker, SiAngular
+  SiTrello, SiFigma, SiJquery , SiDocker, SiAngular, 
 } from "react-icons/si";
-
+{/*SiSupaBase,*/}
 function Skills({ t }) {
   return (
     <section id="skills" className="skills">
@@ -66,6 +66,8 @@ function Skills({ t }) {
           <span><SiMysql /> MySQL</span>
           <span><SiFirebase /> Firebase</span>
           <span><FaDatabase /> SQL</span>
+          {/*<span><SiSupaBase /> SupaBase </span>
+           ... */}
         </div>
 
         <div className="skill-card">

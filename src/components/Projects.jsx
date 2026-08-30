@@ -25,7 +25,7 @@ function Projects({ t }) {
 
   const projects = {
     erp: {
-      title: "Alma Canina ERP",
+      title: "F.P Laura ERP",
         images: [
               {
                 src: "/projects/erp/turnocli.png",
@@ -74,6 +74,10 @@ function Projects({ t }) {
         title: "Yume Sakura Salon",
 
         images: [
+          {
+            src: "/projects/mobile/login.png",
+            title: "Login",
+          },         
           {
             src: "/projects/mobile/inicio.png",
             title: "Inicio / Dashboard: Resumen rápido del día",
