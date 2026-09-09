@@ -77,7 +77,15 @@ function Projects({ t }) {
           {
             src: "/projects/mobile/login.png",
             title: "Login",
-          },         
+          }, 
+          {
+            src: "/projects/mobile/iniciocli.png",
+            title: "HERO",
+          },
+          {
+            src: "/projects/mobile/turnoscli.png",
+            title: "Turno vista cliente: Reserva de turnos",
+          },        
           {
             src: "/projects/mobile/inicio.png",
             title: "Inicio / Dashboard: Resumen rápido del día",

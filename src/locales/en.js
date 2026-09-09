@@ -170,6 +170,11 @@ const en = {
 
     githubAction: "View my projects",
     linkedinAction: "Let's connect professionally",
+    
+
+    socialTitle: "Social Media",
+    instagram: "Instagram",
+    tiktok: "TikTok",
   },
 
 };

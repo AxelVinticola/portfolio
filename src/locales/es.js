@@ -171,6 +171,11 @@ education: {
 
     githubAction: "Ver mis proyectos",
     linkedinAction: "Conectemos profesionalmente",
+
+    socialTitle: "Redes Sociales",
+    instagram: "Instagram",
+    tiktok: "TikTok",
+    
   },
 
 

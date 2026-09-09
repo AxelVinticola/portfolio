@@ -4,7 +4,7 @@ import {
   FaEnvelope,
   FaGithub,
   FaLinkedin,
-  FaMapMarkerAlt, FaPhone
+  FaMapMarkerAlt, FaPhone, FaTiktok, FaInstagram,
 } from "react-icons/fa";
 
 function Contact({ t }) {
@@ -105,7 +105,38 @@ function Contact({ t }) {
         </div>
 
       </div>
+{/* Sección inferior de Redes Sociales */}
+<div className="contact__socials">
+  <h4>{t.contact.socialTitle || "Redes Sociales"}</h4>
 
+  <div className="contact__socials-grid">
+    <a
+      href="https://www.instagram.com/axel_na.vi/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="contact__item"
+    >
+      <FaInstagram />
+      <div>
+        <span>{t.contact.instagram || "Instagram"}</span>
+        <strong>@axel_na.vi</strong>
+      </div>
+    </a>
+
+    <a
+      href="https://www.tiktok.com/@axel.navi"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="contact__item"
+    >
+      <FaTiktok />
+      <div>
+        <span>{t.contact.tiktok || "TikTok"}</span>
+        <strong>@axel.navi</strong>
+      </div>
+    </a>
+  </div>
+</div>
     </section>
   );
 }
